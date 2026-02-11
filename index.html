@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For My Constant ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ffdde1, #ee9ca7);
+            padding-top: 50px;
+        }
+
+        img {
+            width: 250px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            color: white;
+        }
+
+        p {
+            color: white;
+            font-size: 18px;
+            width: 70%;
+            margin: auto;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Happy 1 Year My Constant ❤️</h1>
+
+    <p>
+        Distance sirf geography ka hota hai… feeling ka nahi.  
+        I choose you every day.  
+        Not just Valentine’s week. Not just 17th February.  
+        Every single day. ❤️
+    </p>
+
+    <br><br>
+
+    <img src="{{ url_for('static', filename='herjpg.jpeg') }}" onclick="playMusic()">
+
+    <br>
+
+    <button onclick="location.href='/coriander'">
+        Click For Surprise 🌿
+    </button>
+
+    <audio id="song">
+        <source src="{{ url_for('static', filename='song.mp3') }}" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function playMusic() {
+            document.getElementById("song").play();
+        }
+    </script>
+    <br><br>
+
+<button onclick="showMessage()" style="background-color:white;">
+    One More Thing…
+</button>
+
+<div id="hiddenMessage" style="display:none; margin-top:30px; color:white; width:70%; margin-left:auto; margin-right:auto; font-size:18px; line-height:1.6;">
+    <p>
+        Maybe I didn’t know your name before,  
+        but it feels like I was unknowingly waiting for someone like you.
+    </p>
+
+    <p>
+        I dreamed of a connection that felt real — calm, safe, and meaningful.  
+        And when you came into my life, something just made sense.
+    </p>
+
+    <p>
+        I don’t want to hold you tightly.  
+        I want to hold us gently.
+    </p>
+
+    <p>
+        That’s why I stayed.  
+        That’s why I choose you.  
+        Not just now. Every day.
+    </p>
+</div>
+
+<script>
+    function showMessage() {
+        document.getElementById("hiddenMessage").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
